@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA TECH - Магазин ПК</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">NOVA TECH</h1>
+      <nav class="nav">
+        <a href="#computers">Компьютеры</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#order">Заказать</a>
+        <button class="admin-btn" onclick="openAdmin()">Админ</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Лучшие компьютеры для игр и работы</h2>
+      <p>Собери свой идеальный ПК с гарантией и доставкой по всему миру</p>
+      <a href="#computers" class="btn-primary">Посмотреть модели</a>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="computers" class="catalog">
+    <div class="container">
+      <h2>Наши модели</h2>
+      <div class="cards-grid" id="productList"></div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section id="advantages" class="advantages">
+    <div class="container">
+      <h2>Почему выбирают нас</h2>
+      <ul>
+        <li>Гарантия 1 год</li>
+        <li>Бесплатная доставка</li>
+        <li>Сборка под заказ</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section id="order" class="order">
+    <div class="container">
+      <h2>Оформить заказ</h2>
+      <form id="orderForm">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <button type="submit" class="btn-primary">Отправить</button>
+      </form>
+      <div id="orderMessage"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      © 2026 NOVA TECH — Магазин компьютеров
+    </div>
+  </footer>
+
+  <!-- ADMIN PANEL -->
+  <div class="admin-panel" id="adminPanel">
+    <h2>Админ-панель</h2>
+    <input id="pName" placeholder="Название ПК">
+    <input id="pDesc" placeholder="Описание">
+    <input id="pPrice" placeholder="Цена">
+    <button onclick="addProduct()">Добавить</button>
+    <button onclick="closeAdmin()">Закрыть</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
